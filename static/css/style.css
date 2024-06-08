@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.nav-tabs {
+    background-color: #F075AA;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.nav-link, .nav-link:hover{
+    color: black;
+}
+
+.nav-link.active {
+    background-color: white;
+    color: black;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item:not(.nav-item.active, .nav-item:has(+ .nav-item.active))::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 45%; /* Sesuaikan tinggi garis */
+    width: 1px;
+    background-color: #FFD0D0; /* Ganti dengan warna yang diinginkan */
+}
